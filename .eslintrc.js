@@ -17,5 +17,10 @@ module.exports = {
     'react',
   ],
   rules: {
+    'react/react-in-jsx-scope': 'off',
+    'prefer-arrow-callback': 'off',
+    'react/function-component-definition': 'off',
+    'import/prefer-default-export': 'off',
+    'react/forbid-prop-types': 'off',
   },
 };
