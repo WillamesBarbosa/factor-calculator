@@ -1,4 +1,5 @@
 import React from 'react';
+import { Screen } from './components/screen/screen';
 import Button from './components/button/button';
 import Container from './components/container/container';
 
@@ -7,10 +8,13 @@ const array2 = ['C', ','];
 
 function App() {
   return (
-    <Container>
-      <Button texts={array1} />
-      <Button texts={array2} />
-    </Container>
+    <>
+      <Screen />
+      <Container>
+        <Button texts={array1} />
+        <Button texts={array2} />
+      </Container>
+    </>
 
   );
 }
