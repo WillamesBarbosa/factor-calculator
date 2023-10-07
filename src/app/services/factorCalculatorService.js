@@ -1,8 +1,8 @@
-function factorCalculatorService(productValue, installment) {
+function factorCalculatorService(productValue, installment, setInitialValue) {
   const productValueFloat = parseFloat(productValue);
   const installmentInterger = parseInt(installment, 10);
   const interestFactor = [
-    0,
+    0.95,
     1.03,
     0.5199,
     0.3533,
@@ -19,8 +19,7 @@ function factorCalculatorService(productValue, installment) {
 
   const value = (productValueFloat * interestFactor[installmentInterger]).toFixed(2);
 
-  // Verifica se o value é um float e retorna ele ou um error
-  return Number.isFinite(value) ? value : 'Error';
+  return setInitialValue(value);
 }
 
 export default factorCalculatorService;
