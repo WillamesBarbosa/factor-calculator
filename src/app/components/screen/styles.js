@@ -5,4 +5,6 @@ export const Container = styled.div`
  margin: auto;
  width: 90%;
  background-color: red;
+ color: white;
+ font-size: 40px;
 `;
