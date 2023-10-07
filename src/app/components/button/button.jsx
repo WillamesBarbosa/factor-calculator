@@ -1,15 +1,14 @@
 import P from 'prop-types';
 import * as Styled from './styles';
 
-const Button = ({ texts = [] }) => (
-  <Styled.Container size={texts.length}>
-    {texts.map(
-      (text) => <Styled.Button key={text}>{text}</Styled.Button>,
-    )}
-  </Styled.Container>
+const Button = ({ texts = '', onClick }) => (
+  <Styled.Button onClick={onClick}>
+    {texts}
+  </Styled.Button>
 );
 
 Button.propTypes = {
-  texts: P.arrayOf(P.string).isRequired,
+  texts: P.string.isRequired,
+  onClick: P.func.isRequired,
 };
 export default Button;
