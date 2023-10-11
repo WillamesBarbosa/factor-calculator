@@ -25,8 +25,8 @@ function factorCalculatorService(
   ];
 
   const value = (productValueFloat * interestFactor[installmentInterger]).toFixed(2);
-  const fullValue = (value * interestFactor[installmentInterger]).toFixed(2);
-  const addition = (fullValue - value).toFixed(2);
+  const fullValue = value * installmentInterger;
+  const addition = (fullValue - productValueFloat).toFixed(2);
 
   setPortion(value);
   setTotalValue(fullValue);
