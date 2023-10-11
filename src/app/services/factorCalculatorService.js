@@ -1,5 +1,12 @@
-function factorCalculatorService(productValue, installment, setInitialValue) {
-  const productValueFloat = parseFloat(productValue);
+function factorCalculatorService(
+  productValue,
+  installment,
+  setAddition,
+  setPortion,
+  setTotalValue,
+) {
+  const productValueWithSpotCorrect = productValue.replace(/,/g, '.');
+  const productValueFloat = parseFloat(productValueWithSpotCorrect);
   const installmentInterger = parseInt(installment, 10);
   const interestFactor = [
     0.95,
@@ -18,8 +25,12 @@ function factorCalculatorService(productValue, installment, setInitialValue) {
   ];
 
   const value = (productValueFloat * interestFactor[installmentInterger]).toFixed(2);
+  const fullValue = (value * interestFactor[installmentInterger]).toFixed(2);
+  const addition = (fullValue - value).toFixed(2);
 
-  return setInitialValue(value);
+  setPortion(value);
+  setTotalValue(fullValue);
+  setAddition(addition);
 }
 
 export default factorCalculatorService;
