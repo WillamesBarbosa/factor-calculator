@@ -2,7 +2,7 @@ import styled, { css } from 'styled-components';
 
 export const Form = styled.form`
   ${() => css`
-  margin: auto;
+    margin: auto;
     width: 90%;
     background-color: white;
   `}

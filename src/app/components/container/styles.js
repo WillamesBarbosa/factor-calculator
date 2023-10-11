@@ -1,10 +1,12 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
-export const Wrap = styled.div`
-  width: 90%;
-  margin: auto;
-  height: 50%;
-  display: flex;
-  flex-direction: row;
-  background-color: blue;
+export const Container = styled.div`
+  ${(props) => css`
+    flex:${props.flex};
+    margin: auto;
+    display: flex;
+    height: ${props.height};
+    width: ${props.width};
+    flex-direction: ${props.direction};
+  `}
 `;
