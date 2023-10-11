@@ -7,4 +7,5 @@ export const Button = styled.button`
     border: none;
     background-color: ${(props) => props.backgroundColor};
     color:${(props) => props.color};
+    font-family: 'Poppins', sans-serif;
 `;

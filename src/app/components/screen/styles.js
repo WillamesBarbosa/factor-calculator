@@ -9,5 +9,4 @@ export const Container = styled.div`
  background-color: rgba(23, 24, 26, 1);
  color: white;
  font-size: 40px;
- border: 1px solid white;
 `;
