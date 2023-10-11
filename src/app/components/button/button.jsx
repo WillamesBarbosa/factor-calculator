@@ -1,8 +1,10 @@
 import P from 'prop-types';
 import * as Styled from './styles';
 
-const Button = ({ texts = '', onClick }) => (
-  <Styled.Button onClick={onClick}>
+const Button = ({
+  texts, onClick, size = '5rem', color = 'rgba(41, 168, 255, 1)', backgroundColor = 'rgba(48, 49, 54, 1)',
+}) => (
+  <Styled.Button onClick={onClick} size={size} color={color} backgroundColor={backgroundColor}>
     {texts}
   </Styled.Button>
 );
@@ -10,5 +12,8 @@ const Button = ({ texts = '', onClick }) => (
 Button.propTypes = {
   texts: P.string.isRequired,
   onClick: P.func.isRequired,
+  size: P.string,
+  color: P.string,
+  backgroundColor: P.string,
 };
 export default Button;
