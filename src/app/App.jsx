@@ -25,7 +25,7 @@ function App() {
   return (
     <CalculatorBody>
       <Screen>
-        <ScreenComponent stament="Ini:" value={initialValue} />
+        <ScreenComponent stament="Ini:" value={initialValue === '' ? '0' : initialValue} />
         <ScreenComponent stament="Par:" value={portion} />
         <ScreenComponent stament="Acr:" value={addition} />
         <ScreenComponent stament="Tot:" value={totalValue} />
