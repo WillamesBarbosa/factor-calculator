@@ -8,7 +8,7 @@ export const Portion = ({ amount = 0, onChange }) => {
       <Styled.Select onChange={onChange}>
         {options.map((optionNumber) => (
           <Styled.Option key={optionNumber}>
-            {optionNumber === 0 ? 'À vista' : optionNumber}
+            {optionNumber === 0 ? 'À vista' : `${optionNumber}x`}
           </Styled.Option>
         ))}
       </Styled.Select>

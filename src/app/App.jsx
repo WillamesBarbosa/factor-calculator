@@ -12,8 +12,12 @@ import { handleDeleteNumbersIntoDisplay } from './services/handleDeleteNumbersIn
 import { Container } from './components/container/container';
 import { ButtonGrid } from './components/button-grid/buttonGrid';
 import { ScreenComponent } from './components/screen-component/screenComponent';
+import { Credits } from './components/credits/credits';
+import { handleCleanAllResults } from './services/handleCleanAllResults';
+import ButtonImg from './components/button-img/button';
 
-// const [sumValue, setSumValue] = useState(0);
+// const [sumValue, setSumValue] = useState(0
+import img from './components/svg/botao-de-deletar.png';
 
 function App() {
   const [initialValue, setInitialValue] = useState('0');
@@ -50,12 +54,14 @@ function App() {
           </ButtonGrid>
         </Container>
         <ButtonGrid flex="30%" format="repeat(1, 1fr)">
-          <Button texts="del" onClick={() => handleDeleteNumbersIntoDisplay(initialValue, setInitialValue)} />
-          <Button texts="=" onClick={() => factorCalculatorService(initialValue, selectValue, setAddition, setPortion, setTotalValue)} />
+          <Button backgroundColor="rgba(116, 0, 118, 1)" color="rgba(51, 157, 255, 1)" texts="C" onClick={() => handleCleanAllResults(setInitialValue, setAddition, setPortion, setTotalValue)} />
+          <ButtonImg backgroundColor="rgba(116, 0, 118, 1)" color="rgba(51, 157, 255, 1)" texts={img} onClick={() => handleDeleteNumbersIntoDisplay(initialValue, setInitialValue)} />
+          <Button backgroundColor="rgba(25, 145, 255, 1)" color="rgba(178, 218, 255, 1)" texts="=" onClick={() => factorCalculatorService(initialValue, selectValue, setAddition, setPortion, setTotalValue)} />
         </ButtonGrid>
 
       </Container>
       <GlobalStyles />
+      <Credits>Developed by Willames da Silva Barbosa</Credits>
     </CalculatorBody>
   );
 }
