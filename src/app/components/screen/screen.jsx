@@ -1,8 +1,8 @@
 import P from 'prop-types';
 import * as Styled from './styles';
 
-export const Screen = ({ text }) => (<Styled.Container>{text}</Styled.Container>);
+export const Screen = ({ children }) => (<Styled.Container>{children}</Styled.Container>);
 
 Screen.propTypes = {
-  text: P.string.isRequired,
+  children: P.node.isRequired,
 };
